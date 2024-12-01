@@ -8,7 +8,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Orkut Clone - Home</title>
+		<title>Orkut Clone - Profile</title>
 	</head>
 	<body>
 	</body>

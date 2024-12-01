@@ -26,6 +26,13 @@
 				</div>
 				<input type="submit" value="Sign-Up">
 				<a href="${pageContext.request.contextPath}/index.jsp">Already has an account ? Sign-In</a>
+				<%
+					if (request.getAttribute("message") != null) {
+						%>
+							<p><%= request.getAttribute("message") %><p>
+						<%
+					}
+				%>
 			</form>
 		</div>
 	</body>
