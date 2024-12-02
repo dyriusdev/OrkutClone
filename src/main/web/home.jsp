@@ -9,7 +9,11 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Orkut Clone - Home</title>
+		<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="css/main.css">
+		<script src="js/bootstrap/bootstrap.min.js"></script>
 	</head>
 	<body>
+		<%@include file="components/header.jsp" %>
 	</body>
 </html>

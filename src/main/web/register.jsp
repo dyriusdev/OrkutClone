@@ -4,36 +4,40 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Orkut Clone - Register</title>
+		<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+		<script src="js/bootstrap/bootstrap.min.js"></script>
 	</head>
 	<body>
-		<div>
-			<form action="${pageContext.request.contextPath}/RegisterController" method="post">
-				<div>
-					<label for="fname">First Name :</label>
-					<input type="text" id="fname" name="fname">
-				</div>
-				<div>
-					<label for="lname">Last Name :</label>
-					<input type="text" id="lname" name="lname">
-				</div>
-				<div>
-					<label for="email">Email :</label>
-					<input type="email" id="email" name="email">
-				</div>
-				<div>
-					<label for="password">Password :</label>
-					<input type="password" id="password" name="password">
-				</div>
-				<input type="submit" value="Sign-Up">
-				<a href="${pageContext.request.contextPath}/index.jsp">Already has an account ? Sign-In</a>
-				<%
-					if (request.getAttribute("message") != null) {
-						%>
-							<p><%= request.getAttribute("message") %><p>
-						<%
-					}
-				%>
-			</form>
+		<div class="container">
+			<div class="col-sm 10 offset-sm 1 text-center">
+				<form action="${pageContext.request.contextPath}/RegisterController" method="post">
+					<div>
+						<label for="fname">First Name :</label>
+						<input class="form-control" type="text" id="fname" name="fname" required>
+					</div>
+					<div>
+						<label for="lname">Last Name :</label>
+						<input class="form-control" type="text" id="lname" name="lname" required>
+					</div>
+					<div>
+						<label for="email">Email :</label>
+						<input class="form-control" type="email" id="email" name="email" required>
+					</div>
+					<div>
+						<label for="password">Password :</label>
+						<input class="form-control" type="password" id="password" name="password" required>
+					</div>
+					<input class="form-control" type="submit" value="Sign-Up">
+					<a href="${pageContext.request.contextPath}/index.jsp">Already has an account ? Sign-In</a>
+					<%
+						if (request.getAttribute("message") != null) {
+							%>
+								<p><%= request.getAttribute("message") %><p>
+							<%
+						}
+					%>
+				</form>
+			</div>
 		</div>
 	</body>
 </html>

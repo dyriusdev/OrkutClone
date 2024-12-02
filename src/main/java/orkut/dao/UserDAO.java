@@ -1,6 +1,7 @@
 package orkut.dao;
 
 import org.bson.conversions.Bson;
+import org.bson.types.ObjectId;
 
 import com.mongodb.client.model.Filters;
 
@@ -36,7 +37,7 @@ public class UserDAO {
 	public User getUserById(String id) {
 		try {
 			Database database = Database.getInstance();
-			return database.users.find(Filters.eq("_id", id)).first();
+			return database.users.find(Filters.eq("_id", new ObjectId(id))).first();
 		} catch (Exception e) {
 			return null;
 		}
@@ -54,14 +55,14 @@ public class UserDAO {
 	public void deleteUser(String id) {
 		try {
 			Database database = Database.getInstance();
-			database.users.deleteOne(Filters.eq("_id", id));
+			database.users.deleteOne(Filters.eq("_id", new ObjectId(id)));
 		} catch (Exception e) {}
 	}
 	
 	public void updateProfile(User user) {
 		try {
 			Database database = Database.getInstance();
-			database.users.updateOne(Filters.eq("_id", user.getId()), (Bson)user);
+			database.users.updateOne(Filters.eq("_id", new ObjectId(user.getId())), (Bson)user);
 		} catch (Exception e) {}
 	}
 }

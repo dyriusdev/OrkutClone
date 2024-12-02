@@ -18,6 +18,8 @@ public class User {
 	private String firstName;
 	@BsonProperty(value = "last_name")
 	private String lastName;
+	@BsonProperty(value = "bio")
+	private String bio;
 	@BsonProperty(value = "email")
 	private String email;
 	@BsonProperty(value = "password")
@@ -43,7 +45,11 @@ public class User {
 	public String getLastName() { return lastName; }
 
 	public void setLastName(String value) { lastName = value; }
-
+	
+	public String getBio() { return bio; }
+	
+	public void setBio(String value) { bio = value; }
+	
 	public String getEmail() { return email; }
 
 	public void setEmail(String value) { email = value; }
