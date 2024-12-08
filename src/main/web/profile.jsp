@@ -19,5 +19,7 @@
 		
 		<div class="container">
 		</div>
+		
+		<%@include file="components/footer.jsp" %>
 	</body>
 </html>

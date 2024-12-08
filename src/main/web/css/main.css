@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
 body {
-	background : #01579b;
+	background-color : #abbaba;
+	color : #000;
+}
+
+footer {
+	text-align : center;
+	padding : 5px;
+	background-color : #abbaba;
+	color : #000;
 }

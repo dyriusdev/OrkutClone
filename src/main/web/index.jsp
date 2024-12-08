@@ -5,6 +5,7 @@
 		<meta charset="UTF-8">
 		<title>Orkut Clone - Login</title>
 		<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="css/main.css">
 		<script src="js/bootstrap/bootstrap.min.js"></script>
 	</head>
 	<body>
@@ -31,5 +32,7 @@
 				</form>
 			</div>
 		</div>
+		
+		<%@include file="components/footer.jsp" %>
 	</body>
 </html>
